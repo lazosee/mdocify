@@ -1,0 +1,25 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "./_layout.astro";
+
+const components = await getCollection('components')
+const contents = await Promise.all(components.map(async c => {
+    try {
+        const {Content} = await c.render()
+        return {Content, frontmatter: c.data}
+    } catch(err) {
+        console.error(err)
+        throw err
+    }
+}))
+
+---
+
+<Layout title="Components">
+    <h1 class="">Components</h1>
+    <section class="block content-center-safe">
+        {contents.map(({Content, frontmatter}, i) => {
+            return <Content {frontmatter} />
+        })}
+    </section>
+</Layout>

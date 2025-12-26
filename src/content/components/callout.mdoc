@@ -1,0 +1,113 @@
+---
+name: "Callout"
+---
+
+# This is a callout page
+
+---
+1. Default Callout
+```md
+{% callout title="Callout" %}
+Hello World!
+{% /callout %}
+```
+{% callout title="Callout" %}
+Hello World!
+{% /callout %}
+
+---
+2. Tip Callout
+```mdx
+{% callout type="tip" title="Callout" %}
+Hello World!
+{% /callout %}
+```
+{% callout title="Callout" %}
+Hello World!
+{% /callout %}
+
+---
+3. Warning Callout
+```mdx
+{% callout type="warning" title="Callout" %}
+Hello World!
+{% /callout %}
+```
+{% callout type="warning" title="Warning" %}
+Hello World!
+{% /callout %}
+
+---
+4. Danger Callout
+```mdx
+{% callout type="danger" title="Callout" %}
+Hello World!
+{% /callout %}
+```
+{% callout type="danger" title="Danger" %}
+Hello World!
+{% /callout %}
+
+---
+5. Success Callout
+```mdx
+{% callout type="success" title="Callout" %}
+Hello World!
+{% /callout %}
+```
+{% callout type="success" title="Success" %}
+Hello World!
+{% /callout %}
+
+---
+---
+
+6. ICONS
+
+---
+- Basic Icon
+```mdx
+{% icon name="lightbulb" / %}
+```
+{% icon name="lightbulb" / %}
+
+---
+- Colored Icon (_with Tailwind v4 colors_)
+```mdx
+{% icon name="circle-check" class="text-green-500" / %}
+```
+{% icon name="circle-check" class="text-green-500" / %}
+
+---
+- Icons of different sizes (_with Tailwind v4 utility classes_)
+```mdx
+<!-- Small size -->
+{% icon name="lightbulb" class="w-4 h-4" / %}
+
+<!-- default size -->
+{% icon name="lightbulb" / %}
+
+<!-- large size -->
+{% icon name="lightbulb" class="w-6 h-6" / %}
+```
+Small size (_w-4 h-4_): {% icon name="lightbulb" class="w-4 h-4" / %}
+
+Default size: {% icon name="lightbulb" / %}
+
+Large size (_w-12 h-12_): {% icon name="lightbulb" class="w-12 h-12" / %}
+
+
+---
+- Additional custom styling
+```mdx
+{% icon name="triangle-alert" class="text-rose-500 aspect-square w-12 h-12 bg-rose-200 p-1 rounded-lg" / %}
+```
+{% icon name="triangle-alert" class="text-rose-500 aspect-square w-12 h-12 bg-rose-200 p-1 rounded-lg border-2 shadow-xl" / %}
+> 
+
+{% callout type="tip" title="Note" %}
+- You can add as many tailwind css styles as you like.
+- The utility classes used should target (be applicable) to an HTMLSvgElement
+{% /callout %}
+
+---

@@ -1,0 +1,18 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+import { iconsList, type IconType } from '../icons';
+
+interface Props extends HTMLAttributes<"svg"> {
+    name: IconType;
+    slot?: string;
+}
+const { name, slot, ...rest } = Astro.props
+
+const LucideIcon = iconsList[name];
+---
+
+{ (slot===undefined) ? (
+    <LucideIcon {...rest} />
+) : (
+    <LucideIcon {slot} {...rest} />
+)}

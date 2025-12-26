@@ -1,0 +1,43 @@
+---
+import type { CalloutType } from '../types';
+import Icon from './icon.astro';
+
+
+interface Props {
+    title: string;
+    type: CalloutType;
+}
+const { title, type } = Astro.props;
+
+const icon = type === "danger" ? "triangle-alert" :  type ==="success" ? "circle-check" :  type === 'warning' ? 'circle-alert' : 'lightbulb'
+---
+
+<div class:list={[
+    'block m-1 border border-spacing-1.5 overflow-hidden rounded-xl [corner-shape:squircle]',
+    {'border-teal-700': type === 'tip'},
+    {'border-orange-700': type === 'warning'},
+    {'border-red-700': type === 'danger'},
+    {'border-green-700': type === 'success'}
+]}>
+    <div class:list={[
+        'flex font-semibold p-2 gap-2 justify-start items-center text-white',
+        {'bg-teal-500': type === 'tip'},
+        {'bg-orange-500': type === 'warning'},
+        {'bg-red-500': type === 'danger'},
+        {'bg-green-500': type === 'success'}
+    ]}>
+        <slot name="icon">
+            <Icon name={icon} class="w-8" />
+        </slot>
+        <slot name="title">{title}</slot>
+    </div>
+    <div class:list={[
+        "block p-2",
+        {'bg-teal-50': type === 'tip'},
+        {'bg-orange-50': type === 'warning'},
+        {'bg-red-50': type === 'danger'},
+        {'bg-green-50': type === 'success'}
+    ]}>
+        <slot></slot>
+    </div>
+</div>
