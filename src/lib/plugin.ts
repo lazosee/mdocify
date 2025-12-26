@@ -1,6 +1,4 @@
-import { CalloutAttributes } from "$lib/types/callout.js";
 import { component, type AstroMarkdocConfig } from "@astrojs/markdoc/config";
-import { IconAttributes } from "./types/icon.ts";
 
 export interface MdocifyConfig {
 }
@@ -18,12 +16,33 @@ export default function mdocify(config?: MdocifyConfig) {
     return ({
         tags: {
             callout: {
-                render: component('$lib/components', 'Callout'),
-                attributes: CalloutAttributes
+                render: component("@mdocify/components", 'Callout'),
+                attributes: {
+                    title: {
+                        type: String,
+                        required: true
+                    },
+                    type: {
+                        type: String,
+                        matches: ["tip", "warning", "danger", "success"],
+                        required: false,
+                        default: "tip"
+                    }
+                }
             },
             icon: {
-                render: component('$lib/components', 'Icon'),
-                attributes: IconAttributes
+                render: component("@mdocify/components", 'Icon'),
+                attributes: {
+                    name: {
+                        type: String,
+                        required: true,
+                    },
+                    slot: {
+                        type: String,
+                        required: false,
+                    },
+
+                }
             }
         }
     } satisfies AstroMarkdocConfig)
