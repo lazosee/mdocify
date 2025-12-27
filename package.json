@@ -32,6 +32,29 @@
 		},
 		"./types": "./dist/index.d.ts"
 	},
+	"engines": {
+		"node": ">=18.0.0"
+	},
+	"keywords": [
+		"astro",
+		"mdocify",
+		"markdoc",
+		"tags",
+		"library"
+	],
+	"author": "Lazaro Osee <oseelazaro@gmail.com> (https://www.lazaroosee.xyz)",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/lazosee/mdocify.git"
+	},
+	"bugs": {
+		"url": "https://github.com/lazosee/mdocify/issues"
+	},
+	"publishConfig": {
+		"access": "public",
+		"registry": "https://registry.npmjs.org/"
+	},
 	"peerDependencies": {
 		"@astrojs/markdoc": "latest",
 		"astro": "latest"
@@ -68,7 +91,6 @@
 		"vitest": "^4.0.15",
 		"vitest-browser-svelte": "^2.0.1"
 	},
-	"keywords": [],
 	"dependencies": {
 		"@lucide/astro": "^0.562.0",
 		"@mdocify/components": "^0.0.4"
