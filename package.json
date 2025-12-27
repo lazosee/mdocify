@@ -1,6 +1,6 @@
 {
 	"name": "@mdocify/mdocify",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"scripts": {
 		"dev": "astro dev",
 		"build": "astro build && npm run prepack",
