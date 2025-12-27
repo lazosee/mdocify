@@ -51,6 +51,9 @@
 	"bugs": {
 		"url": "https://github.com/lazosee/mdocify/issues"
 	},
+	"publishConfig": {
+		"access": "public"
+	},
 	"peerDependencies": {
 		"@astrojs/markdoc": "latest",
 		"astro": "latest"
