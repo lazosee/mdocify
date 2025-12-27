@@ -34,7 +34,6 @@
 	},
 	"peerDependencies": {
 		"@astrojs/markdoc": "latest",
-		"@mdocify/components": "^0.0.3",
 		"astro": "latest"
 	},
 	"devDependencies": {
@@ -72,6 +71,6 @@
 	"keywords": [],
 	"dependencies": {
 		"@lucide/astro": "^0.562.0",
-		"@mdocify/components": "^0.0.3"
+		"@mdocify/components": "^0.0.4"
 	}
 }
