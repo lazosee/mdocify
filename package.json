@@ -46,14 +46,10 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/lazosee/mdocify.git"
+		"url": "git+https://github.com/lazosee/mdocify.git"
 	},
 	"bugs": {
 		"url": "https://github.com/lazosee/mdocify/issues"
-	},
-	"publishConfig": {
-		"access": "public",
-		"registry": "https://registry.npmjs.org/"
 	},
 	"peerDependencies": {
 		"@astrojs/markdoc": "latest",
